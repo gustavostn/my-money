@@ -46,3 +46,13 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 
 - In Next.js, you can use a special <b>layout.tsx file to create UI that is shared between multiple pages</b>.
   - One benefit of using layouts in Next.js is that on navigation, only the page components update while the layout won't re-render
+
+## Chapter 5
+
+- When use <b>a</b> HTML element to navigate between pages, all page is refreshed
+- In Next.js, you can use the <b>Link</b> (next/link) Component to link between page
+  - <b>Link</b> allows you to do client-side navigation with JavaScript
+- To get the user's current path from the URL, Next.js provides a hook called usePathname()
+  - usePathname() is a React hook
+  - Add React's "use client" directive to the top of the file
+  - Then import usePathname() from next/navigation
