@@ -8,7 +8,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" className="dark:bg-gray-800">
-      <body className={montserrat.className}>{children}</body>
+      <body className={`${montserrat.className} antialiased`}>{children}</body>
     </html>
   );
 }
