@@ -215,39 +215,3 @@ export async function fetchFilteredCustomers(query: string) {
     throw new Error("Failed to fetch customer table.");
   }
 }
-
-export async function fetchInvoiceInfos() {
-  try {
-    // Precisa retornar o valor monetario total de invoices pagas e pendentes
-    const data = await sql`
-      SELECT
-        COUNT(*) AS totalQtty,
-        COUNT(CASE WHEN status = 'paid' THEN 1 END) AS paidQtty,
-        COUNT(CASE WHEN status = 'pending' THEN 1 END) AS pendingQtty
-      FROM invoices
-    `;
-
-    const { totalqtty, paidqtty, pendingqtty } = data.rows[0];
-    return {
-      paidValue: paidqtty,
-      pendingValue: totalqtty,
-      totalQtty: totalqtty,
-    };
-  } catch (error) {
-    console.error("Database Error:", error);
-    throw new Error("Failed to fetch invoice infos.");
-  }
-}
-
-export async function fetchCustomersQtty() {
-  try {
-    const data = await sql`
-      SELECT COUNT(*)
-      from customers;
-    `;
-    return data.rows[0].count;
-  } catch (error) {
-    console.error("Database Error:", error);
-    throw new Error("Failed to fetch invoice infos.");
-  }
-}
