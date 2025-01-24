@@ -56,3 +56,11 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
   - usePathname() is a React hook
   - Add React's "use client" directive to the top of the file
   - Then import usePathname() from next/navigation
+
+## Chapter 7
+
+- Using Server Components to fetch data
+  - Server Components support JavaScript Promises
+  - Solution for asynchronous tasks.
+  - You can use async/await syntax without needing hooks or fetching libraries
+  - Server Components run on the server, so you can keep expensive data fetches and logic on the server
