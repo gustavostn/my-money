@@ -35,3 +35,14 @@ For more information, see the [course curriculum](https://nextjs.org/learn) on t
 <b>Recommended reading:</b> <br />
 [Image Optimization Docs](https://nextjs.org/docs/app/building-your-application/optimizing/images) <br />
 [Font Optimization Docs](https://nextjs.org/docs/app/building-your-application/optimizing/fonts)
+
+## Chapter 4
+
+- Next.js use file-system routing, where folders are used to create nested routes - Each folder represents a route segment that maps to a URL segment
+
+- <b>page.tsx</b> is a special Next.js file that exports a React component, and it's <b>required for the route to be accessible</b>
+
+- [Example of nested routes](https://nextjs.org/learn/dashboard-app/creating-layouts-and-pages#nested-routing)
+
+- In Next.js, you can use a special <b>layout.tsx file to create UI that is shared between multiple pages</b>.
+  - One benefit of using layouts in Next.js is that on navigation, only the page components update while the layout won't re-render
